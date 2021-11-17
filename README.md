@@ -4,7 +4,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 
 _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vida e construir uma carreira de sucesso em tecnologia, onde a pessoa só paga quando conseguir um bom trabalho."_
 
-O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda introduÃ§Ã£o ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias Ágeis e habilidades comportamentais.
+O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias Ágeis e habilidades comportamentais.
 
 ## Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
 
@@ -54,7 +54,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 6-3: _CSS Flexbox - Part 1_
 - [ ] 6-4: _CSS Flexbox - Part 2_
 - [ ] 6-5: _CSS Responsivo - Mobile First_
-- [ ] 6-6: _[Projeto - PÃ¡gina inicial do Facebook]()_
+- [ ] 6-6: _[Projeto - Página inicial do Facebook]()_
 
 ##### Bloco 7: JavaScript ES6 & Testes Unitários
 
@@ -80,7 +80,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 10: Jest
 
 - [ ] 10-1: _Primeiros passos no Jest_
-- [ ] 10-2: _Jest - Testes AssÃ­ncronos_
+- [ ] 10-2: _Jest - Testes Assíncronos_
 - [ ] 10-3: _Jest - Simulando comportamentos_
 - [ ] 10-4: _[Projeto - Jest Assíncrono e Mocking]()_
 
@@ -120,7 +120,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [ ] 16-1: _Introdução ao Redux_
 - [ ] 16-2: _React com Redux - Parte 1_
-- [ ] 16-3: _React com Redux - PrÃ¡tica_
+- [ ] 16-3: _React com Redux - Prática_
 - [ ] 16-4: _React com Redux - Parte 2_
 - [ ] 16-5: _Testes síncronos com React-Redux_
 - [ ] 16-6: _[Projeto - Tabela com filtros de dados]()_
