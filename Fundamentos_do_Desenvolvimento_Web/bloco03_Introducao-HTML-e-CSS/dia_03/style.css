@@ -1,24 +1,58 @@
-#primaria {
-      background-color: #03b5aa;
+h1 {
+      font-size: 40px;
+      border-width: 1px;
+      border-color: black;
+      border-style: double;
 }
 
-#secundaria {
-      background-color: #037971;
+h1, h3 {
+      color: red;
+      
+}
+ol {
+      background-color:yellow;
 }
 
-#complementar {
+li {
       font-size: 20px;
 }
 
-#escura {
-      background-color: #023436;
-      color: rgb(240, 240, 240);
+li em {
+      font-weight: bold;
 }
 
-#clara {
-      background-color: #00bfb3;
+.list-odd {
+      text-transform:uppercase;
 }
 
-h3 {
-      text-align: center;
+.list-even {
+      background-color: green;
+}
+
+.ul-1 {
+     color: blue;
+}
+
+.ul-2 {
+      color: pink;
+}
+
+#stack:hover {
+      color: orange;
+}
+
+#w3:hover {
+      color: green;
+}
+
+#mdn:hover {
+      color: black;
+}
+
+#dev:hover {
+      color: yellow;
+}
+
+#trybe:hover {
+      color: green;
 }
