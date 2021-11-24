@@ -1,0 +1,58 @@
+h1 {
+      font-size: 40px;
+      border-width: 1px;
+      border-color: black;
+      border-style: double;
+}
+
+h1, h3 {
+      color: red;
+      
+}
+ol {
+      background-color:yellow;
+}
+
+li {
+      font-size: 20px;
+}
+
+li em {
+      font-weight: bold;
+}
+
+.list-odd {
+      text-transform:uppercase;
+}
+
+.list-even {
+      background-color: green;
+}
+
+.ul-1 {
+     color: blue;
+}
+
+.ul-2 {
+      color: pink;
+}
+
+#stack:hover {
+      color: orange;
+}
+
+#w3:hover {
+      color: green;
+}
+
+#mdn:hover {
+      color: black;
+}
+
+#dev:hover {
+      color: yellow;
+}
+
+#trybe:hover {
+      color: green;
+}
