@@ -1,13 +1,7 @@
-let myName = "Lucas";
-let birthCity = "Belo Horizonte";
-let birthYear = 2002;
+let base = 5;
+let height = 8;
 
-console.log(myName);
-console.log(birthCity);
-console.log(birthYear);
+let area = base * height;
 
-birthYear = 2030;
-console.log(birthYear);
+console.log(area);
 
-birthCity = "nova lima";
-console.log(birthCity);
