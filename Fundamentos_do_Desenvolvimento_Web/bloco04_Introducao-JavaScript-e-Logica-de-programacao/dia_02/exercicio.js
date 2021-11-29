@@ -68,3 +68,40 @@ for(i=0; i <= array.length; i+=1){
     arraydiv2.push(array[i]/2)
 }
 console.log("9. " + arraydiv2)
+
+//Bonus 1.
+let ordCres = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+for(i = 1; i < ordCres.length; i+=1){
+    for(let j = 0; j < i; j+=1){
+        if(ordCres[i] < ordCres[j]){
+            let temp= ordCres[i]
+            ordCres[i] = ordCres[j]
+            ordCres[j] = temp
+        }
+    }
+}
+console.log("B1. ", ordCres);
+
+//Bonus 2.
+let ordDec = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+for(i = 1; i < ordDec.length; i+=1){
+    for(let j = 0; j < i; j+=1){
+        if(ordDec[i] > ordDec[j]){
+            let temp= ordDec[i]
+            ordDec[i] = ordDec[j]
+            ordDec[j] = temp
+        }
+    }
+}
+console.log("B2. ", ordDec);
+
+//Bonus 3.
+let newArray = []
+for(i = 0; i < numbers.length; i+=1){
+    if(i == (numbers.length - 1)){
+        newArray.push(numbers[i]*2)
+    }else{
+        newArray.push(numbers[i]*numbers[i+1])
+    }
+}
+console.log("B3. ",newArray);
