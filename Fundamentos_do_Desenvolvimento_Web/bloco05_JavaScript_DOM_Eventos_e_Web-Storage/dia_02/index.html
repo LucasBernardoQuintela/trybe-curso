@@ -78,7 +78,34 @@
       leftContent.className = 'left-content';
       main.appendChild(leftContent);
       //6.
+      let rightContent = document.createElement('section');
+      rightContent.className = 'right-content';
+      main.appendChild(rightContent);
+      //7.
+      let img = document.createElement('img');
+      img.className = 'small-image';
+      img.src = 'https://picsum.photos/200';
+      rightContent.appendChild(img);
+      //8.
+      let ul = document.createElement('ul');
+      let lista = ['um','dois','tres','quatro','cinco','seis','sete','oito','nove','dez'];
+      for(let i in lista){
+        let li = document.createElement('li');
+        li.innerText = lista[i];
+        ul.appendChild(li);
+      }
+      rightContent.appendChild(ul);
+      //9.
+      let h3 = document.createElement('h3');
+      for(i=0; i<3;i+=1){
+        main.appendChild(h3);
+      }
 
+      //Segunda parte
+      //1.
+      h1.className = 'title';
+      //2.
+      h3.className = 'description';
     </script>
   </body>
 </html>
