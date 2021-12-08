@@ -46,11 +46,20 @@ feriadosBtn('Feriados');
 
 //3.
 const holidayBtn = document.getElementById('btn-holiday');
-holidayBtn.addEventListener('click', addColortoBtnOnClick);
-function addColortoBtnOnClick(){
-  let feriados = document.getElementsByClassName('holiday')
-  for (let i in feriados){
-    feriados[i].style.color = 'blue';
+holidayBtn.addEventListener('click', showHoliday);
+let feriados = document.getElementsByClassName('holiday')
+function showHoliday(){
+  if (feriados[0].style.backgroundColor != 'blue'){
+    for (let i = 0; i < feriados.length; i+=1){
+      feriados[i].style.backgroundColor = "blue";
+      feriados[i].style.color = "white";
+
+    }
+  }else{
+    for (let i = 0; i < feriados.length; i+=1){
+      feriados[i].style.backgroundColor = "rgb(238,238,238)";
+      feriados[i].style.color = "#777";
+    }
   }
 }
 
@@ -63,3 +72,85 @@ function criaBtnFriday(str){
 }
 
 criaBtnFriday('Sexta-feira');
+
+//5.
+const fridayBtn = document.getElementById('btn-friday');
+fridayBtn.addEventListener('click', showFriday);
+function showFriday(){
+  let sexta = document.getElementsByClassName('friday')
+  if (sexta[0].style.backgroundColor != 'yellow'){
+    for (let i = 0; i < sexta.length; i+=1){
+      sexta[i].style.backgroundColor = "yellow";
+      sexta[i].style.color = "white";
+
+    }
+  }else{
+    for (let i = 0; i < sexta.length; i+=1){
+      sexta[i].style.backgroundColor = "rgb(238,238,238)";
+      sexta[i].style.color = "#777";
+    }
+  }
+}
+
+//6.
+let dias = document.getElementsByClassName('day');
+for(let j = 0; j < dias.length; j+=1){
+  dias[j].addEventListener('mouseover', mouseCima);
+  dias[j].addEventListener('mouseleave', mouseSai);
+}
+
+function mouseCima(event){
+  let item = event.target;
+  item.style.fontSize = '2em';
+}
+
+
+function mouseSai(event){
+  let item = event.target;
+  item.style.fontSize = '20px';
+}
+
+//7.
+function addTask(str){
+  let span = document.createElement('span');
+  span.innerHTML = str;
+  document.getElementsByClassName('my-tasks')[0].appendChild(span);
+}
+
+addTask('cozinhar');
+
+//8.
+function addDescription(str){
+  let description = document.createElement('div');
+  description.style.backgroundColor = str;
+  description.className = 'task';
+  description.addEventListener('click',addTaskStatus);
+  document.getElementsByClassName('my-tasks')[0].appendChild(description);
+}
+
+addDescription('blue');
+
+//9.
+function addTaskStatus(event){
+  let item = event.target;
+  item.classList.add('selected');
+  item.removeEventListener('click',addTaskStatus);
+  item.addEventListener('click', rmvTaskStatus);
+}
+
+function rmvTaskStatus(event){
+  let item = event.target;
+  item.classList.remove('selected');
+  item.removeEventListener('click', rmvTaskStatus);
+  item.addEventListener('click', addTaskStatus);
+}
+
+//10.
+for(j = 0; j < dias.length; j+=1){
+  dias[j].addEventListener('click', addStatusColor);
+}
+
+function addStatusColor(event){
+  let item = event.target;
+  item.style.color = document.getElementsByClassName('selected')[0].style.backgroundColor;
+}
