@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 6.1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="" method="get">
+    <fieldset id='personal-info'>
+      <label for="name">Nome completo: 
+        <input type="text" name="nome" id="name" maxlength="40">
+      </label>
+      <br>
+      <label for="email">Email: 
+        <input type="email" name='email' id="email" maxlength="50">
+      </label>
+      <br>
+      <label for="cpf">CPF: 
+        <input type="number" name='cpf' id="cpf" maxlenght='11'>
+      </label>
+      <br>
+      <label for="adress">Endereço: 
+        <input type="text" name='endereco' id="adress" maxlength="200">
+      </label>
+      <br>
+      <label for="city">Cidade: 
+        <input type="text" name='cidade' id="city" maxlength="28">
+      </label>
+      <br>
+      <label for="estate">Estado: 
+        <select name ='estado' id="estate"></select>
+      </label>
+      <br>
+      <label>Tipo:</label>
+      <label for="house" class='city-label'>
+          <input type="radio" name="moradia" value='casa' id="house" >Casa
+      </label>
+      <label for="apartment" class='city-label'>
+        <input type="radio" name="moradia" value="apartamento" id="apartment">Apartamento
+      </label>
+    </fieldset>
+    <fieldset id="last-job">
+      <label for="application">Resumo do currículo: 
+        <textarea name="resumo-curriculo" id="application" cols="100" rows="10"></textarea>
+      </label>
+      <br>
+      <label for="job">Cargo: 
+        <input type="text" name="cargo" id="job" maxlength="40">
+      </label>
+      <br>
+      <label for="job-description">Descrição do cargo: 
+        <input type="text" name="descricao-do-cargo" id="job-description" maxlength="500">
+      </label>
+      <br>
+      <label for="date">Data de início: 
+        <input type="text" name="data-de-início" id="date" pattern="\d{2}\/\d{2}\/\d{4}" placeholder='Eg. dd/mm/aaaa'>
+      </label>
+    </fieldset>
+    <button type="submit" id='concluido'>Enviar</button>
+  </form>
+  <script src='script.js'></script>
+</body>
+</html>
