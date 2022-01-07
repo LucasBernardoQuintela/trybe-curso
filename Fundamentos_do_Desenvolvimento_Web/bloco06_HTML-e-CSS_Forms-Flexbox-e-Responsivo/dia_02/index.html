@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 6.1</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./node_modules/pikaday/css/pikaday.css">
+  <script src='./node_modules/jquery/dist/jquery.js'></script>
+  <script src="./node_modules/pikaday/pikaday.js"></script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+</head>
+<body>
+  <form id='form' class='form-control' method="get">
+    <fieldset id='personal-info'>
+      <label for="name">Nome completo: 
+        <input autofocus class='form-control' type="text" name="nome" id="name" maxlength="40">
+      </label>
+      <br>
+      <label for="email">Email: 
+        <input class='form-control' type="email" name='email' id="email" maxlength="50">
+      </label>
+      <br>
+      <label for="cpf">CPF: 
+        <input class='form-control' type="number" name='cpf' id="cpf" maxlenght='11'>
+      </label>
+      <br>
+      <label for="adress">Endereço: 
+        <input class='form-control' type="text" name='endereco' id="adress" maxlength="200">
+      </label>
+      <br>
+      <label for="city">Cidade: 
+        <input class='form-control' type="text" name='cidade' id="city" maxlength="28">
+      </label>
+      <br>
+      <label for="estate">Estado: 
+        <select class='form-control' name ='estado' id="estate"></select>
+      </label>
+      <br>
+      <label>Tipo:</label>
+      <label for="house" class='city-label'>
+          <input type="radio" name="moradia" value='casa' id="house" checked>Casa
+      </label>
+      <label for="apartment" class='city-label'>
+        <input type="radio" name="moradia" value="apartamento" id="apartment">Apartamento
+      </label>
+    </fieldset>
+    <fieldset id="last-job">
+      <label for="application">Resumo do currículo: 
+        <textarea class='form-control' name="resumo-curriculo" id="application" cols="100" rows="10"></textarea>
+      </label>
+      <br>
+      <label for="job">Cargo: 
+        <input class='form-control' type="text" name="cargo" id="job" maxlength="40">
+      </label>
+      <br>
+      <label for="job-description">Descrição do cargo: 
+        <input class='form-control' type="text" name="descricao-do-cargo" id="job-description" maxlength="500">
+      </label>
+      <br>
+      <label for="date">Data de início: 
+        <input class='form-control' type="text" name="data-de-início" id="date" autocomplete="off" placeholder='Eg. dd/mm/aaaa'>
+      </label>
+    </fieldset>
+    <button class='btn btn-success' type="submit" id='concluido'>Enviar</button>
+  </form>
+  <script>
+    var picker = new Pikaday({ field: $('#date')[0],
+    format: 'DD/MM/YYYY',
+    toString(date, format) {
+      // you should do formatting based on the passed format,
+      // but we will just return 'D/M/YYYY' for simplicity
+      const day = date.getDate();
+      const month = date.getMonth() + 1;
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    },});
+    </script>
+    <script src='script.js'></script>
+</body>
+</html>
