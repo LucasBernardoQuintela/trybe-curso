@@ -38,6 +38,11 @@
 
       const meuPrimeiroReducer = (state = ESTADO_INICIAL_1, action) => {
         switch (action.type) {
+          case "Rodrigo_Sobrenome":
+            return ({
+              ...state,
+              sobrenome: action.sobrenome,
+            });
           default:
             return state;
         }
@@ -45,10 +50,51 @@
 
       const meuSegundoReducer = (state = ESTADO_INICIAL_2, action) => {
         switch (action.type) {
+          case "Bruna_Sobrenome":
+            return ({
+              ...state,
+              sobrenome: action.sobrenome,
+            });
           default:
             return state;
         }
       };
+
+      const combinados = Redux.combineReducers({
+        meuPrimeiroReducer,
+        meuSegundoReducer
+      });
+      
+      const store = Redux.createStore(combinados);
+
+      store.subscribe(() => {
+        const sobrenome = document.getElementById('sobrenome-1');
+        const sobrenome2 = document.getElementById('sobrenome-2');
+        const objects = store.getState();
+        const {
+          meuPrimeiroReducer: {sobrenome: sobrenomeState},
+          meuSegundoReducer: {sobrenome: sobrenomeState2},
+        } = objects;
+        sobrenome.innerText = sobrenomeState;
+        sobrenome2.innerText = sobrenomeState2;
+      });
+
+      const action1 = (sobrenome) => ({
+        type: "Rodrigo_Sobrenome",
+        sobrenome,
+      });
+
+      const action2 = (sobrenome) => ({
+        type: "Bruna_Sobrenome",
+        sobrenome,
+      });
+
+      window.onload = () => {
+        setTimeout(() => {
+          store.dispatch(action1("Oliveira"));
+          store.dispatch(action2("Santos da Silva"));
+        }, 3000);
+      }
     </script>
   </body>
 </html>
