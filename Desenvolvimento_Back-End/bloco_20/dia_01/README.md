@@ -1,0 +1,1 @@
+## Os exercícios do dia de hoje foram apenas de prática com o MySQL Workbench
